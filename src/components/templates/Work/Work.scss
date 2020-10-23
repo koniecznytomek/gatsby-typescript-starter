@@ -1,0 +1,59 @@
+@import 'styles/config';
+
+.Work {
+  @include grid;
+
+  &__header {
+    grid-column: 1 / -1;
+  }
+
+  &__footer {
+    grid-column: 1 / -1;
+  }
+
+  /* Rules only for markdown template*/
+  /* <Row> */
+  &__row {
+    @include grid(1);
+    grid-column: 1 / -1;
+
+    &--bg {
+      background: $grey;
+    }
+  }
+
+  /* <Col> */
+  &__col {
+    @include grid(1);
+    grid-column: 1 / 7;
+
+    &--bg {
+      background: $grey;
+    }
+  }
+
+  /* <Desc> */
+  &__desc {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    padding: 25px;
+
+    span {
+      display: block;
+      text-transform: none;
+      padding-bottom: 3px;
+    }
+
+    p {
+      padding-bottom: 5px;
+    }
+  }
+
+  /* <Img> */
+  &__img {
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+    width: 100%;
+  }
+}

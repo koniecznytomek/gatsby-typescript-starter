@@ -1,0 +1,14 @@
+@import 'styles/config';
+
+.Home {
+  @include grid;
+
+  .header {
+    grid-column: 1 / -1;
+
+    h1 {
+      @include font-title;
+      color: $black;
+    }
+  }
+}
